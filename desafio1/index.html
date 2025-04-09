@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main id="caixa">
+        <h1>Calculadora de frete</h1>
+        <form>
+            <label>Qual é a distância de entrega em km</label>
+            <br>
+            <br>
+            <input type="number" id="num">
+            <br>
+        </form>
+        <br>
+        <button id="but" onclick="verificar()">Verificar</button>
+        <br>
+        <p>O valor será de</p>
+        <p id="resposta"></p>
+    </main>
+</body>
+<script>
+    function verificar() {
+        let num = Number(document.getElementById("num").value);
+        let resposta = document.getElementById("resposta");
+        let km;
+        if (num <= 100) {
+            km = 1.2 * num;
+            resposta.innerHTML = "R$: " + km;
+        }
+        else if (num > 100) {
+            km = 1.5 * num;
+            resposta.innerHTML = "R$: " + km;
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main id="caixa">
+        <h1>Álcool ou gasolina?</h1>
+        <form>
+            <label>Preço do álcool (em reais)</label>
+            <br>
+            <br>
+            <input type="number" id="num1">
+            <br>
+            <br>
+            <label>Preço da gasolina (em reais)</label>
+            <br>
+            <br>
+            <input type="number" id="num2">
+            <br>
+        </form>
+        <br>
+        <button id="but" onclick="verificar()">Verificar</button>
+        <br>
+        <p id="resultado"></p>
+    </main>
+</body>
+<script>
+    function verificar() {
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let resultado = document.getElementById("resultado");
+        num2 = num2 * 0.7;
+        if (num1 < num2) {
+            resultado.innerHTML = "Vale mais a pena usar álcool";
+        }
+        else {
+            resultado.innerHTML = "Vale mais a pena usar gasolina";
+        }
+    }
+</script>
+</html>
