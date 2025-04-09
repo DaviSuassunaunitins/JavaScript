@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula5 atividade2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="caixa">
+        <form>
+            <h1>Verificador de ano bissexto</h1>
+            <label>Digite um ano</label>
+            <br>
+            <br>
+            <input type="number" id="num">
+            <br>
+        </form>
+        <br>
+        <button id="but" onclick="verificar()">Verficar</button>
+        <br>
+        <p id="resultado"></p>
+    </div>
+</body>
+<script>
+    function verificar() {
+        let num = Number(document.getElementById("num").value);
+        let resultado = document.getElementById("resultado");
+        if ((num % 4 == 0) && (num % 100 != 0)) {
+            resultado.innerHTML = "Esse ano é bissexto";
+        }
+        else if ((num % 4 == 0) && ((num % 100 == 0) && (num % 400 == 0))) {
+            resultado.innerHTML = "Esse ano é bissexto";
+        }
+        else {
+            resultado.innerHTML = "Esse ano não é bissexto";
+        }
+    }
+</script>
+</html>

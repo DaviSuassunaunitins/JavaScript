@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="caixa">
+        <h1>Calculadora de IMC</h1>
+        <form>
+            <label>Peso</label>
+            <br>
+            <p>(Em Kg)</p>
+            <input type="number" id="peso">
+            <br>
+            <br>
+            <label>Altura</label>
+            <br>
+            <p>(Em metros)</p>
+            <input type="number" id="altura">
+            <br>
+        </form>
+        <br>
+        <button id="but" onclick="calcular()">Calcular</button>
+        <br>
+        <p id="resultadoNum"></p>
+        <p id="resultadoText"></p>
+    </div>
+</body>
+<script>
+    function calcular() {
+        let peso = Number(document.getElementById("peso").value);
+        let altura = Number(document.getElementById("altura").value);
+        let resultadoNum = document.getElementById("resultadoNum");
+        let resultadoText = document.getElementById("resultadoText");
+        let imc = peso / (altura ** 2);
+        resultadoNum.innerHTML = imc.toFixed(2);
+        switch (true) {
+            case (imc <= 18.5):
+                resultadoText.innerHTML = "Abaixo do peso";
+            break;
+            case ((imc >= 18.6) && (imc <= 24.9)):
+                resultadoText.innerHTML = "Peso ideal!";
+            break;
+            case ((imc >= 25.0) && (imc <= 29.9)):
+                resultadoText.innerHTML = "Levemente acima do peso";
+            break;
+            case ((imc >= 30.0) && (imc <= 34.9)):
+                resultadoText.innerHTML = "Obesidade grau I";
+            break;
+            case ((imc >= 35.0) && (imc <= 39.9)):
+                resultadoText.innerHTML = "Obesidade grau II (severa)";
+            break;
+            case (imc >= 40.0):
+                resultadoText.innerHTML = "Obesidade grau III (mórbida)";
+            break;
+        }
+    }
+</script>
+</html>

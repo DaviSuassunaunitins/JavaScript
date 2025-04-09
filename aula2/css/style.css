@@ -1,0 +1,10 @@
+#caixa {
+    text-align: center;
+    margin-bottom: 3em;
+}
+#caixaTempo {
+    text-align: center;
+}
+#tempo1, #tempo2 {
+    border-radius: 1em;
+}

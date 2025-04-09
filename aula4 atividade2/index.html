@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="caixa">
+        <form>
+            <label>Digite um número:</label>
+            <br>
+            <br>
+            <input type="number" id="num">
+            <br>
+            <br>
+        </form>
+        <button id="but" onclick="verificar()">Verificar</button>
+        <br>
+        <br>
+        <p id="resultado"></p>
+    </div>
+</body>
+<script>
+    function verificar() {
+        let num = Number(document.getElementById("num").value);
+        let resultado = document.getElementById("resultado");
+        if (num % 2 == 0) {
+            resultado.innerHTML = "É par";
+        }
+        else {
+            resultado.innerHTML = "É impar";
+        }
+    }
+</script>
+</html>
