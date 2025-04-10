@@ -1,0 +1,9 @@
+#caixa {
+    text-align: center;
+    margin-top: 2em;
+}
+#but {
+    border-radius: 0.4em;
+    background-color: #333;
+    color: white;
+}

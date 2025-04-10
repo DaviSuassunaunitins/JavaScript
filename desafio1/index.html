@@ -28,16 +28,14 @@
 <script>
     function verificar() {
         let num = Number(document.getElementById("num").value);
-        let resposta = document.getElementById("resposta");
-        let km;
+        let frete;
         if (num <= 100) {
-            km = 1.2 * num;
-            resposta.innerHTML = "R$: " + km;
+            frete = 1.5 * num;
         }
         else if (num > 100) {
-            km = 1.5 * num;
-            resposta.innerHTML = "R$: " + km;
+            frete = 1.2 * num;
         }
+        document.getElementById("resposta").innerHTML = "R$: " + frete.toFixed(2);
     }
 </script>
 

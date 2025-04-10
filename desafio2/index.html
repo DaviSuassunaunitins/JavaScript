@@ -33,12 +33,11 @@
         let num1 = Number(document.getElementById("num1").value);
         let num2 = Number(document.getElementById("num2").value);
         let resultado = document.getElementById("resultado");
-        num2 = num2 * 0.7;
-        if (num1 < num2) {
+        if (num1 < (num2 * 0.7)) {
             resultado.innerHTML = "Vale mais a pena usar álcool";
         }
         else {
-            resultado.innerHTML = "Vale mais a pena usar gasolina";
+            resultado.innerHTML = "Vale mais a pena usar gasolina"; 
         }
     }
 </script>
